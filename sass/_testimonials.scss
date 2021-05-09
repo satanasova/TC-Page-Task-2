@@ -1,0 +1,61 @@
+.testimonials {
+    grid-column: content-start / content-end;
+    background-color: transparent;
+    display: grid;
+    justify-items: center;
+    grid-gap: 1rem;
+    padding: 7rem 0 8rem 0;
+
+    .slider {
+        height: 23.1rem;
+        margin: 5rem 0 4.5rem 0;
+
+        &__list {
+
+            .slide {
+
+                display: grid;
+                grid-template-columns: repeat(2, 57rem);
+                justify-content: center;
+                grid-gap: 3rem;
+                
+                
+                .review {
+                    display: grid;
+                    grid-gap: 3rem;
+                    justify-items: center;
+
+                    &__text {
+                        padding: 4rem 3rem;
+                        display: grid;
+                        grid-gap: 2rem;
+                        background-color: #f7f7f7;
+                        text-align: center;
+                        line-height: 1.3;
+
+                    }
+                    
+                    &__rating {
+                        color: $color-secondary-light-3;
+
+                        .icon {
+                            width: 1.2rem;
+                            height: 1.2rem;
+                        }
+                    }
+
+            
+                    &__caption {
+                        background-color: #fff;
+                        
+                    }
+                }
+        
+            }
+        }
+
+        &__nav {
+
+        }
+    }
+}

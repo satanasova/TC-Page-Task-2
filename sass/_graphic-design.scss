@@ -1,0 +1,90 @@
+.graphic-design {
+    grid-column: content-start / content-end;
+    background-color: transparent;
+    display: grid;
+    justify-items: center;
+    padding: 7rem 0;
+    grid-gap: 0.5rem;
+
+    >.subtitle {
+        margin-top: 1.5rem;
+    }
+
+    .benefits {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 57rem);
+        width: 100%;
+        justify-content: center;
+        padding-top: 4rem;
+        grid-gap: 3rem;
+
+        .subtitle, &__video {
+            margin-top: .5rem;
+        }
+        &__content {
+            
+            &--list {
+                display: grid;
+                grid-row-gap: 3rem;
+                padding-top: 4.5rem;
+
+                .single-benefit {
+                    display: grid;
+                    grid-template-columns: max-content max-content;
+                    grid-column-gap: 3rem;
+
+                    .description {
+                        text-transform: none;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        display: block;
+                        color: $color-secondary-light;
+                    }
+
+                    .icon {
+                        width: 4.5rem;
+                        height: 4.5rem;
+                        fill: $color-secondary-light-3;
+
+                    }
+                }
+            }
+        }
+
+        &__video {
+            overflow: hidden;
+            margin-top: 1rem;
+            position: relative;
+
+            &--mp4 {
+                width: 100%;
+                height: 34.5rem;
+                object-fit: cover;
+            }
+    
+            &--caption {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                width: 7.5rem;
+                height: 7.5rem;
+                
+                .btn {
+                    color: inherit;
+                    width: 100%;
+                    height: 100%;
+                }
+    
+                .icon {
+                    width: 100%;
+                    height: 100%;
+                }
+    
+            }
+        }
+    
+    }
+}
+

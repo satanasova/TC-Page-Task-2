@@ -1,0 +1,155 @@
+.header {
+    grid-column: grid-start / grid-end;
+    // height: 75.5vh;
+    background-image: linear-gradient(to bottom, $color-secondary 4.5rem, transparent 4.5rem),url("../img/banner.png");
+    background-size: cover;
+    background-position: bottom;
+
+
+    &__contacts {
+        padding: 1.1rem 0;
+        background-color: transparent;
+        font-family: $display-font;
+        font-size: 1.5rem;
+        color: $color-secondary-light-3;
+        
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        a:hover {
+            color: $color-primary;
+            transition: all .2s;
+        }
+
+        &--social {
+            display: grid;
+            grid-template-columns: repeat(5, min-content);
+            grid-gap: 2rem;
+
+            .icon {
+                width: 1.4rem;
+                height: 1.4rem;
+            }
+        }
+
+        &--personal {
+            display: grid;
+            grid-template-columns: minmax(max-content, 15rem) min-content minmax(max-content, 15rem) ;
+            justify-content: end;
+            align-items: center;
+            grid-gap: 1.5rem;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 100%;
+                width: 1px;
+                background-color: $color-secondary-light;
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+
+            & > * {
+                display: grid;
+                grid-template-columns: repeat(2, max-content);
+                grid-gap: 1rem;
+            }
+
+            .icon {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+
+    &__navigation {
+        text-transform: uppercase;
+        display: grid;
+        grid-template-columns: max-content 1fr max-content;
+        grid-column-gap: 6rem;
+        align-items: center;
+        padding: 3rem 0;
+
+        .header__nav {
+            font-family: 'Maven Pro', sans-serif;
+            font-weight: 500;
+            width: 100%;
+            letter-spacing: 0;
+
+            .nav__list {
+                list-style-type: none;
+                display: grid;
+                grid-template-columns: repeat(4, max-content);
+                grid-gap: 5.5rem;
+            }
+            
+            .nav__link:link,
+            .nav__link:visited {
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+
+            .nav__link {
+                &--browse {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        display: block;
+                        border-top: 0.5rem solid currentColor;
+                        border-right: 0.4rem solid transparent;
+                        border-left: 0.4rem solid transparent;
+                        position: absolute;
+                        top: 45%;
+                        right: -1.5rem;                 }
+                }
+            }
+        }
+
+        .header__signup {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            grid-gap: 1.7rem;
+            .icon {
+                width: 1.5rem;
+                height: 1.3rem;
+            }
+        }
+    }
+
+    &__banner {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        grid-template-rows: min-content min-content minmax(13.5vh, 1fr) min-content min-content;
+        padding: 14.5vh 0 11vh 0rem;
+        grid-gap: 1.5rem;
+
+
+        h1 {
+            margin-top: -1.5rem;
+        }
+
+        .banner__guarantee {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-family: $display-font;
+            font-weight: 600;
+            
+
+            
+            
+
+            .icon {
+                width: 2.5rem;
+                height: 1.5rem;
+                transform: translateY(0.3rem);
+            }
+
+            & span:first-child {
+                color: $color-primary;
+            }
+        }
+    }
+}

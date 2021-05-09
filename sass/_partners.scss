@@ -1,0 +1,18 @@
+.partners {
+    grid-column: grid-start / grid-end;
+    background-color: $color-secondary-light-1;
+    padding: 3.5rem 0 4rem 0;
+
+    &__wrapper {
+        display: grid;
+        grid-gap: 7%;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+    }
+
+    &__logo {
+        width: 100%;
+        max-width: 17rem;
+        height: auto;
+    }
+}

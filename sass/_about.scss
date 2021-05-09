@@ -1,0 +1,14 @@
+.about {
+    grid-column: content-start / content-end;
+    background-color: transparent;
+    display: grid;
+    // grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 1rem;
+    padding: 9rem 0 7.5rem 0;
+
+    &__cards {
+        margin: 5rem 0 2.5rem 0;
+        
+    }
+}

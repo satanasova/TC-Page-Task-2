@@ -1,0 +1,42 @@
+.email {
+    grid-column: content-start / content-end;
+    background-color: transparent;
+    padding: 5.5rem 0 10rem 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 6rem;
+
+
+    &__coupon {
+        font-family: $display-font;
+        .coupon__value {
+            color: $color-primary;
+        }
+
+        .coupon__text {
+              text-transform: uppercase;
+              color: $color-secondary-light;
+              font-weight: 600;
+              font-size: 1.6rem;
+
+              letter-spacing: .02rem;
+        }
+    }
+      
+
+    &__field {
+        border: none;
+        width: 20rem;
+        padding: 1rem .1rem;
+
+        &::placeholder{
+            font-size: 1.4rem;
+            color:$color-secondary-light-3;
+
+        }
+  
+    }
+}

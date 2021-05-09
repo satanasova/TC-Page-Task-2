@@ -1,0 +1,92 @@
+.contest-design {
+    grid-column: grid-start / grid-end;
+    background-color: $color-secondary-light-1;
+    padding: 7.5rem 0;
+
+    .contest__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4.5rem;
+
+        .slider {
+            height: 46.2rem;
+    
+            &__nav {
+                justify-self: end;
+                align-self: end;
+            }
+        
+            &__list {
+                .slide {
+       
+                    &__img {
+                        max-height: 23.1rem;
+                        width: 100%;
+                        position: relative;
+                        cursor: pointer;
+    
+                        &:hover {
+                            .img__caption {
+                                opacity: 1;
+                            }
+                            
+                            img {
+                            filter: brightness(.2);}
+                        }
+    
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            transition: all .3s;
+                            position: relative;
+                            cursor: pointer;
+                            
+                        }
+    
+                        .img__caption {
+                            color: #fff;
+                            font-family: $display-font;
+                            font-weight: 600;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            width: 100%;
+                            justify-items: center;
+                            grid-row-gap: 8.5rem;
+                            text-transform: uppercase;
+                            opacity: 0;
+                            // display: none;
+                            transition: all .4s ease-in-out;
+                            
+                            span {
+                                background-color: #f0423c;
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                padding: 1rem 0;
+        
+                                &:first-of-type {
+                                    border-right: 1px solid $color-secondary-light-2;
+                                }
+                            }
+                            
+                            .icon {
+                                width: 2rem;
+                                height: 2rem;
+                                fill: $color-primary;
+                                grid-column: 1/-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            justify-self: center;
+            grid-column: 1/-1;
+            margin-top: 1.2rem;
+        }
+    
+    }
+
+}

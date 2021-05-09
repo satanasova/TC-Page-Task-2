@@ -1,0 +1,33 @@
+.counter {
+    grid-column: grid-start / grid-end;
+    
+    background-image: url("../img/counter.png");
+    background-size: cover;
+    color: #fff;
+    font-family: $display-font;
+
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+        justify-items: center;
+    }
+
+    &__number {
+        font-size: 4rem;
+    }
+
+    &__content {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+
+    .single-counter{
+        width: 100%;
+        padding: 5rem 0 6.4rem 0;
+        display: grid;
+        grid-gap: 1rem;
+        justify-content: center;
+        justify-items: center;
+    }
+}
