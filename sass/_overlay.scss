@@ -1,0 +1,27 @@
+body {
+    .overlay {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        width: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: fixed;
+        z-index: 111;
+        background-color: black;
+        transition: all .4s ease-in-out;
+
+
+        
+        &.active {
+            width: 80%;
+            height: 80vh;
+            opacity: 1;
+            visibility: visible;
+
+    
+        }
+    }
+}

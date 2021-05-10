@@ -18,7 +18,8 @@
         
             &__list {
                 .slide {
-       
+                    // width: 293px !important;
+                    // max-height: 46.3rem;
                     &__img {
                         max-height: 23.1rem;
                         width: 100%;
@@ -35,7 +36,7 @@
                         }
     
                         img {
-                            max-width: 100%;
+                            max-width: 29.3rem;
                             max-height: 100%;
                             transition: all .3s;
                             position: relative;
@@ -44,6 +45,10 @@
                         }
     
                         .img__caption {
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            z-index: 2;
                             color: #fff;
                             font-family: $display-font;
                             font-weight: 600;
@@ -54,7 +59,6 @@
                             grid-row-gap: 8.5rem;
                             text-transform: uppercase;
                             opacity: 0;
-                            // display: none;
                             transition: all .4s ease-in-out;
                             
                             span {

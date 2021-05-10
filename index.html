@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js" defer></script>
+    <script src="../js/slider.js" defer></script>
+    <script src="../js/counter.js" defer></script>
+    <script src="../js/video.js" defer></script>
+    <script src="../js/main.js" defer></script>
+
     <title>Design Contest</title>
 </head>
 <body>
-    
+    <div class="overlay">
+
+    </div>
+
     <header class="header">
         <div class="wrapper header__wrapper">
             <div class="header__contacts">
@@ -67,7 +78,7 @@
                     </ul>
                 </nav>
                 <div class="header__signup">
-                    <button class="btn btn--inline">
+                    <button class="btn btn--inline" id="login">
                         <svg class="icon">
                             <use xlink:href="img/sprite.svg#icon-key"></use>
                         </svg>
@@ -163,25 +174,25 @@
     <section class="counter">
         <div class="wrapper counter__wrapper">
             <div class="single-counter">
-                <h5 class="counter__number">313</h5>
+                <h5 class="counter__number" data-target="313">0</h5>
                 <span class="line__thin line__thin--primary">&nbsp;</span>
                 <p class="counter__content">New contest today</p>
             </div>
 
             <div class="single-counter">
-                <h5 class="counter__number">5171</h5>
+                <h5 class="counter__number" data-target="5171">0</h5>
                 <span class="line__thin line__thin--primary">&nbsp;</span>
                 <p class="counter__content">Open contest</p>
             </div>
 
             <div class="single-counter">
-                <h5 class="counter__number">33612</h5>
+                <h5 class="counter__number" data-target="33612">0</h5>
                 <span class="line__thin line__thin--primary">&nbsp;</span>
                 <p class="counter__content">Contest to date</p>
             </div>
 
             <div class="single-counter">
-                <h5 class="counter__number">&dollar;8515</h5>
+                <h5 class="counter__number" id="dollar" data-target="8515">0</h5>
                 <span class="line__thin line__thin--primary">&nbsp;</span>
                 <p class="counter__content">Payout last month</p>
             </div>
@@ -238,8 +249,11 @@
                     <source src="img/video.mp4" type="video/mp4"></source>
                 </video>
                 <figcaption class="benefits__video--caption">
-                    <button class="btn"><svg class="icon">
+                    <button class="btn" id="play"><svg class="icon">
                         <use xlink:href="img/sprite.svg#icon-play"></use>
+                    </svg></button>
+                    <button class="btn" id="pause"><svg class="icon">
+                        <use xlink:href="img/sprite.svg#icon-pause"></use>
                     </svg></button>
             </figure>
 
@@ -310,38 +324,14 @@
                             <figure class="slide__img">
                                 <img src="img/slider-8.png" alt="Slider Photo">
                                 <figcaption class="img__caption"><svg class="icon"><use xlink:href="img/sprite.svg#icon-anchor"></use></svg><span>&dollar;1259.00</span><span>45 designs</span></figcaption>
-                            </div>
-                        </div>
-
-                        <div class="slide">
-                            <figure class="slide__img"> 
-                                <img src="img/slider-1.png" alt="Slider Photo">
-                                <figcaption class="img__caption"><svg class="icon"><use xlink:href="img/sprite.svg#icon-anchor"></use></svg><span>&dollar;1259.00</span><span>45 designs</span></figcaption>
-                            </figure>
-        
-                            <figure class="slide__img">
-                                <img src="img/slider-5.png" alt="Slider Photo">
-                                <figcaption class="img__caption"><svg class="icon"><use xlink:href="img/sprite.svg#icon-anchor"></use></svg><span>&dollar;1259.00</span><span>45 designs</span></figcaption>
-                            </figure>
-                        </div>
-
-                        <div class="slide">
-                            <figure class="slide__img"> 
-                                <img src="img/slider-2.png" alt="Slider Photo">
-                                <figcaption class="img__caption"><svg class="icon"><use xlink:href="img/sprite.svg#icon-anchor"></use></svg><span>&dollar;1259.00</span><span>45 designs</span></figcaption>
-                            </figure>
-        
-                            <figure class="slide__img">
-                                <img src="img/slider-6.png" alt="Slider Photo">
-                                <figcaption class="img__caption"><svg class="icon"><use xlink:href="img/sprite.svg#icon-anchor"></use></svg><span>&dollar;1259.00</span><span>45 designs</span></figcaption>
                             </figure>
                         </div>
 
                 </div>
     
-            <button class="btn btn--cta">Browse all contest</button>   
-
+                
             </div>  
+            <button class="btn btn--cta">Browse all contest</button>   
     </section>
 
     <section class="testimonials">
@@ -351,7 +341,7 @@
 
         <div class="slider">
             <div class="slider__list">
-                <div class="slide">
+                <!-- <div class="slide">
                     
                     <figure class="review">
                         <blockquote class="review__text subtitle">
@@ -423,7 +413,7 @@
 
                     </figure>
 
-                </div>
+                </div> -->
 
                 <div class="slide">
                     
@@ -460,7 +450,10 @@
                         </figcaption>
 
                     </figure>
-            
+
+                </div>
+
+                <div class="slide">
                     <figure class="review">
                         <blockquote class="review__text subtitle">
 
@@ -498,6 +491,46 @@
                     </figure>
 
                 </div>
+
+                <div class="slide">
+                    <figure class="review">
+                        <blockquote class="review__text subtitle">
+
+                            <p>"Design contest is a truly amazing services with reasonable prices and, beleive it or not, a really enjoyable platform for the design.impressive responses from designers,"</p>
+
+                            <div class="review__rating">
+                                <span>5 star raiting</span>
+                                <svg class="icon">
+                                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                                </svg>
+                
+                                <svg class="icon">
+                                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                                </svg>
+                
+                                <svg class="icon">
+                                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                                </svg>
+                
+                                <svg class="icon">
+                                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                                </svg>
+                
+                                <svg class="icon">
+                                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                                </svg>    
+                            </div>
+
+                        </blockquote>
+
+                        <figcaption class="review__caption">
+                            <h5 class="heading-5">Etalon Diagnostics</h5>
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
 
             </div>
         </div>
