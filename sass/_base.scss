@@ -4,11 +4,22 @@ $color-secondary-light:#666666;
 $color-secondary-light-1:#f7f7f7;
 $color-secondary-light-2: #e4e4e4;
 $color-secondary-light-3: #999999;
-
-
 $default-font: "Exo", sans-serif;
 $display-font: "Lato", sans-serif;
 
+//midea mixin 
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) {@content}; // 600px /16px default
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and(max-width: 60.94em) {@content}; // 900px /16px default
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) {@content}; // 1200px /16px default
+    }
+
+}
 
 *,
 *::before,
@@ -27,6 +38,10 @@ a:link {
 html {
     font-size: 62.5%; //1rem = 10px
     box-sizing: border-box;
+
+    @include respond(tab-land) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -164,10 +179,18 @@ body {
             background-color: $color-secondary-light-1;
         }
         
-        //media 780 - 1200
-        // &:nth-child(4n) {
-        //     grid-column: 1/2;
-        //     grid-row: 2/3;
+        @include respond(tab-port) {
+            &:nth-child(4n) {
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+        }
+
+        // @media only screen and (max-width: 75em) {
+        //     &:nth-child(4n) {
+        //         grid-column: 1/2;
+        //         grid-row: 2/3;
+        //     }
         // }
         
         &:hover {
