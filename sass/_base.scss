@@ -10,6 +10,7 @@ $display-font: "Lato", sans-serif;
 //midea mixin 
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
+        // @media only screen and (max-width: 22.5em) {@content}; // 360px /16px default
         @media only screen and (max-width: 37.5em) {@content}; // 600px /16px default
     }
     @if $breakpoint == tab-port {
@@ -67,6 +68,9 @@ body {
         font-family: $default-font;
         letter-spacing: 0;
         font-weight: 700;
+        @include respond(phone) {
+            font-size: 2rem;
+        }
 
         span {
             color: $color-primary;
@@ -186,6 +190,14 @@ body {
             }
         }
 
+        @include respond(phone) {
+            &:nth-child(4n) {
+                grid-column: 1/2;
+                grid-row: 4/6;
+            }
+        }
+
+
         // @media only screen and (max-width: 75em) {
         //     &:nth-child(4n) {
         //         grid-column: 1/2;
@@ -273,6 +285,7 @@ body {
         opacity: 0;
         width: 0;
         transition: all .3s ease-in-out;
+        overflow: hidden;
     }
 
 

@@ -1,4 +1,4 @@
-function slick(sliderBlock, slidesToShow, slidesToScroll) {
+function slick(sliderBlock, slidesToShow, slidesToScroll, {breakpoint, slToShow, slToScroll}) {
     const prev = $(`.${sliderBlock} .slider__nav .btn--prev`);
     const next = $(`.${sliderBlock} .slider__nav .btn--next`);
     
@@ -10,13 +10,21 @@ function slick(sliderBlock, slidesToShow, slidesToScroll) {
         prevArrow: prev,
 		infinite: true,
 		speed: 500,
-		slidesToShow: slidesToShow,
-		slidesToScroll: slidesToScroll
+        slidesToShow,
+        slidesToScroll,
+        responsive: [
+            {
+                breakpoint,
+                settings: {
+                    slidesToShow: slToShow,
+                    slidesToScroll: slToScroll
+                }
+
+            }
+        ]
 });
 
 }
-
-
 
 function infiniteSlider(sliderBlock) {
     const slider = $(`.${sliderBlock} .slider .slider__list`);

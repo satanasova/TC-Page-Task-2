@@ -13,9 +13,9 @@
         font-size: 1.5rem;
         color: $color-secondary-light-3;
         
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // align-items: center;
 
         a:hover {
             color: $color-primary;
@@ -26,6 +26,9 @@
             display: grid;
             grid-template-columns: repeat(5, min-content);
             grid-gap: 2rem;
+            @include respond(phone) {
+                grid-gap: .5rem;
+            }
 
             .icon {
                 width: 1.4rem;
@@ -39,6 +42,10 @@
             justify-content: end;
             align-items: center;
             grid-gap: 1.5rem;
+            @include respond(phone) {
+                grid-gap: .5rem;
+
+            }
 
             &::after {
                 content: "";
@@ -65,11 +72,12 @@
 
     &__navigation {
         text-transform: uppercase;
-        display: grid;
-        grid-template-columns: max-content 1fr max-content;
-        grid-column-gap: 6rem;
+        // display: grid;
+        // grid-template-columns: max-content 1fr max-content;
+        // grid-column-gap: 6rem;
         align-items: center;
         padding: 3rem 0;
+
 
         .header__nav {
             font-family: 'Maven Pro', sans-serif;
@@ -130,10 +138,10 @@
     }
 
     &__banner {
-        display: grid;
-        justify-content: center;
-        justify-items: center;
-        grid-template-rows: min-content min-content minmax(13.5vh, 1fr) min-content min-content;
+        // display: grid;
+        // justify-content: center;
+        // justify-items: center;
+        // grid-template-rows: min-content min-content minmax(13.5vh, 1fr) min-content min-content;
         padding: 14.5vh 0 11vh 0rem;
         grid-gap: 1.5rem;
 

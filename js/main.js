@@ -1,13 +1,12 @@
 // slick('contest__wrapper', 4, 1);
-slick('testimonials', 2, 1);
+
+slick('testimonials', 2, 1, {breakpoint: 900, slToShow: 1, slToScroll: 1});
 
 infiniteSlider('contest__wrapper');
 
 window.addEventListener('scroll', counterFn);
 
 playVideo('.benefits__video');
-
-
 
 function login() {
     $(document).on('click', function(e){
@@ -25,4 +24,5 @@ function login() {
     })    
 }    
 login();
+
 

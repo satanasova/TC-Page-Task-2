@@ -28,7 +28,7 @@
 
     <header class="header">
         <div class="wrapper header__wrapper">
-            <div class="header__contacts">
+            <div class="header__contacts d-flex justify-content-center justify-content-sm-between">
                 <div class="header__contacts--social">
                     <a href="#"><svg class="icon">
                         <use xlink:href="img/sprite.svg#icon-facebook"></use>
@@ -61,7 +61,7 @@
                     </a>
                 </div>
             </div>
-            <div class="header__navigation">
+            <div class="header__navigation d-flex justify-content-between flex-wrap">
                 <a href="#" class="logo__full">
                     <img src="img/logo.png" alt="Logo" class="logo-img">
                     <span class="logo-text">
@@ -69,7 +69,22 @@
                         Con<span>test</span>
                     </span>
                 </a>
-                <nav class="header__nav">
+                <div class="header__signup">
+                    <button class="btn btn--inline" id="login">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-key"></use>
+                        </svg>
+                        <span>LOGIN</span>
+                    </button>
+                    <button class="btn btn--inline">
+                        <svg class="icon">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                        </svg>
+                        <span>REGISTER</span>
+                    </button>
+                </div>
+
+                <nav class="header__nav d-none d-sm-flex">
                     <ul class="nav__list">
                         <li>
                             <a href="#" class="nav__link nav__link--browse">Browse catagories</a>
@@ -204,28 +219,12 @@
                         <li><a href="#" class="nav__link">Browse contest</a></li>
                         <li><a href="#" class="nav__link">Pricing plan</a></li>
                     </ul>
-                </nav>
-                <div class="header__signup">
-                    <button class="btn btn--inline" id="login">
-                        <svg class="icon">
-                            <use xlink:href="img/sprite.svg#icon-key"></use>
-                        </svg>
-                        <span>LOGIN</span>
-                    </button>
-                    <button class="btn btn--inline">
-                        <svg class="icon">
-                            <use xlink:href="img/sprite.svg#icon-user"></use>
-                        </svg>
-                        <span>REGISTER</span>
-                    </button>
-                </div>
-                
-                  
+                </nav> 
             </div>
-            <div class="header__banner">
+            <div class="header__banner d-flex flex-column align-items-center justify-content-center">
                 <img src="img/logo-l.png" alt="Logo" class="logo-img">
                 <span class="line__thick line__thick--primary">&nbsp;</span>
-                <h1 class="heading-1">Professional Graphic Designs</h1>
+                <h1 class="heading-1 text-center mt-3">Professional Graphic Designs</h1>
                 <button class="btn btn--cta">Get started now</button>
                 <div class="banner__guarantee">
                     <span>
@@ -239,11 +238,11 @@
             </div>
         </div>
     </header>
-        
+     
     <section class="about">
         <h2 class="heading-2">What do you need design</h2>
         <span class="line__thick line__thick--primary">&nbsp;</span>
-        <p class="subtitle">How does one design and develop for the responsive web? A lot of methodologies</p>
+        <p class="subtitle text-center">How does one design and develop for the responsive web? A lot of methodologies</p>
         
         <div class="about__cards cards">
             <div class="card">
@@ -329,13 +328,13 @@
 
     <section class="graphic-design">
         <h2 class="heading-2">Graphic design made easy</h2>
-        <span class="line__thick line__thick--primary">&nbsp;</span>
-        <p class="subtitle">How does one design and develop for the responsive web? A lot of methodologies</p>
+        <span class="line__thick line__thick--primary ">&nbsp;</span>
+        <p class="subtitle text-center">How does one design and develop for the responsive web? A lot of methodologies</p>
 
         <div class="benefits">
             <div class="benefits__content">
-                <h3 class="heading-3">Need work done?</h3>
-                <p class="subtitle">Post your project and receive competitive bids from freelancers within minutes. Our reputation system will make it easy.</p>
+                <h3 class="heading-3 ps-2">Need work done?</h3>
+                <p class="subtitle ps-2">Post your project and receive competitive bids from freelancers within minutes. Our reputation system will make it easy.</p>
                 <ul class="benefits__content--list">
 
                     <li class="single-benefit">
@@ -386,9 +385,9 @@
             </figure>
 
         </div>
-    </section>
+    </section> 
 
-    <section class="contest-design">
+    <section class="contest-design ps-2 ps-sm-0">
         <div class="wrapper contest__wrapper">
             <h2 class="heading-2">Examples of graphic designs</h2>
             
@@ -465,83 +464,10 @@
     <section class="testimonials">
         <h2 class="heading-2">Our testimonials</h2>
         <span class="line__thick line__thick--primary">&nbsp;</span>
-        <p class="subtitle">How does one design and develop for the responsive web? A lot of methodologies</p>
+        <p class="subtitle text-center">How does one design and develop for the responsive web? A lot of methodologies</p>
 
         <div class="slider">
             <div class="slider__list">
-                <!-- <div class="slide">
-                    
-                    <figure class="review">
-                        <blockquote class="review__text subtitle">
-                            <p>"We appreciate the professionalismsa of designs contest the Customer Service too. We have worked with you guys for about 8 years and looks like we should get another 8 in! :)"</p>
-                            <div class="review__rating">
-                                <span>3 star raiting</span>
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>    
-                            </div>
-
-                        </blockquote>
-
-                        <figcaption class="review__caption">
-                            <h5 class="heading-5">Etalon Diagnostics</h5>
-                        </figcaption>
-
-                    </figure>
-            
-                    <figure class="review">
-                        <blockquote class="review__text subtitle">
-
-                            <p>"Design contest is a truly amazing services with reasonable prices and, beleive it or not, a really enjoyable platform for the design.impressive responses from designers,"</p>
-
-                            <div class="review__rating">
-                                <span>5 star raiting</span>
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>
-                
-                                <svg class="icon">
-                                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                                </svg>    
-                            </div>
-
-                        </blockquote>
-
-                        <figcaption class="review__caption">
-                            <h5 class="heading-5">Etalon Diagnostics</h5>
-                        </figcaption>
-
-                    </figure>
-
-                </div> -->
 
                 <div class="slide">
                     
@@ -698,7 +624,9 @@
         <button class="btn btn--cta">Email me</button>
     </section>
     
-    <footer class="footer"><div class="wrapper"></div></footer>
+    <footer class="footer"><div class="wrapper"></div></footer> 
+
+
 
 </body>
 </html>
